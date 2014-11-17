@@ -5,6 +5,12 @@
 //  Created by JNYJ on 14-11-17.
 //  Copyright (c) 2014年 JNYJ. All rights reserved.
 //
+/*
+iOS 7 Background App Refresh Tutoria
+http://www.devfright.com/ios-7-background-app-refresh-tutorial/
+
+
+*/
 
 import UIKit
 
@@ -13,12 +19,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
+	func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+		println("Application - background refresh")
+		// Set up Local Notifications
+		application.cancelAllLocalNotifications()
+		var localNotification : UILocalNotification = UILocalNotification()
+		var now : NSDate = NSDate()
+		localNotification.fireDate = now;
+		localNotification.alertBody = "Temperature in TESTING is 26c.";
+		localNotification.soundName = UILocalNotificationDefaultSoundName;
+		localNotification.applicationIconBadgeNumber = 1
+		application.scheduleLocalNotification(localNotification)
 
+		completionHandler(UIBackgroundFetchResult.NewData);
+
+		println("Application - background refresh end   UIBackgroundFetchResultNewData")
+	}
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		return true
 	}
-
+	func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+		application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+		return true
+	}
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 		// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

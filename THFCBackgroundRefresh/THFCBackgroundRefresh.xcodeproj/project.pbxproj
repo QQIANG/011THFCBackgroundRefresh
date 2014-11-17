@@ -13,6 +13,7 @@
 		7C12E46B1A198C9E00347FEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C12E46A1A198C9E00347FEE /* Images.xcassets */; };
 		7C12E46E1A198C9E00347FEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C12E46C1A198C9E00347FEE /* LaunchScreen.xib */; };
 		7C12E47A1A198C9F00347FEE /* THFCBackgroundRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C12E4791A198C9F00347FEE /* THFCBackgroundRefreshTests.swift */; };
+		7C80FFE21A19A6C700ACDB66 /* Background-Weather.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7C80FFE11A19A6C700ACDB66 /* Background-Weather.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7C12E4731A198C9F00347FEE /* THFCBackgroundRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THFCBackgroundRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C12E4781A198C9F00347FEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C12E4791A198C9F00347FEE /* THFCBackgroundRefreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFCBackgroundRefreshTests.swift; sourceTree = "<group>"; };
+		7C80FFE11A19A6C700ACDB66 /* Background-Weather.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "Background-Weather.zip"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				7C12E4631A198C9E00347FEE /* AppDelegate.swift */,
 				7C12E4651A198C9E00347FEE /* ViewController.swift */,
 				7C12E4671A198C9E00347FEE /* Main.storyboard */,
+				7C80FFE11A19A6C700ACDB66 /* Background-Weather.zip */,
 				7C12E46A1A198C9E00347FEE /* Images.xcassets */,
 				7C12E46C1A198C9E00347FEE /* LaunchScreen.xib */,
 				7C12E4611A198C9E00347FEE /* Supporting Files */,
@@ -161,6 +164,11 @@
 				TargetAttributes = {
 					7C12E45D1A198C9E00347FEE = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7C12E4721A198C9F00347FEE = {
 						CreatedOnToolsVersion = 6.1;
@@ -192,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C80FFE21A19A6C700ACDB66 /* Background-Weather.zip in Resources */,
 				7C12E4691A198C9E00347FEE /* Main.storyboard in Resources */,
 				7C12E46E1A198C9E00347FEE /* LaunchScreen.xib in Resources */,
 				7C12E46B1A198C9E00347FEE /* Images.xcassets in Resources */,
@@ -338,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = THFCBackgroundRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = THFCBackgroundRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +418,7 @@
 				7C12E47F1A198C9F00347FEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C12E4801A198C9F00347FEE /* Build configuration list for PBXNativeTarget "THFCBackgroundRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +427,7 @@
 				7C12E4821A198C9F00347FEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
